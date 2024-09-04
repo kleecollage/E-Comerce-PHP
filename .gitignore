@@ -1,0 +1,46 @@
+# Archivos y directorios generados por IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/vcs.xml
+
+# Dependencias de Composer
+/vendor/
+
+# Configuraciones de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de caché de PHP
+*.php~ 
+*.php.swp
+*.swp
+*.swo
+
+# Archivos de configuración específicos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y bases de datos locales
+*.log
+*.sql
+*.sqlite
+
+# Directorios de caché
+.cache/
+.cache_bootstrap/
+.cache_var/
+
+# Directorios de subida de archivos
+/uploads/
+
+# Configuraciones de servidor
+.vagrant/
+Homestead.yaml
+Homestead.json
