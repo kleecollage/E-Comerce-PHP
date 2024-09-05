@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Tienda de Camisetas</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="<?=base_url?>assets/css/styles.css">
 </head>
 <body>
 <div id="container">
     <!-- --------------------   CABECERA   -------------------- -->
     <header id="header">
         <div id="logo">
-            <img src="assets/img/logo.png" alt="Logo">
+            <img src="<?=base_url?>assets/img/logo.png" alt="Logo">
             <a href="index_maqueta.php">Tienda de Camisetas</a>
         </div>
     </header>
@@ -36,5 +36,6 @@
             </li>
         </ul>
     </nav>
-
+    <!-- CONTENT (sidebar/registro/destacado/etc) -->
     <div id="content">
+

@@ -18,3 +18,5 @@
         </ul>
     </div>
 </aside>
+<!-- --------------------   CONTENIDO CENTRAL   -------------------- -->
+<div id="central">
