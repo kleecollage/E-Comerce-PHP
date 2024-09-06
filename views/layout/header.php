@@ -10,30 +10,21 @@
     <header id="header">
         <div id="logo">
             <img src="<?=base_url?>assets/img/logo.png" alt="Logo">
-            <a href="index_maqueta.php">Tienda de Camisetas</a>
+            <a href="<?=base_url?>">Tienda de Camisetas</a>
         </div>
     </header>
     <!-- --------------------   MENU   -------------------- -->
     <nav id="menu">
+        <?php $categorias = Utils::showCategorias(); ?>
         <ul>
             <li>
-                <a href="">Inicio</a>
+                <a href="<?=base_url?>">Inicio</a>
             </li>
-            <li>
-                <a href="">Categoria</a>
-            </li>
-            <li>
-                <a href="">Categoria 2</a>
-            </li>
-            <li>
-                <a href="">Categoria 3</a>
-            </li>
-            <li>
-                <a href="">Categoria 4</a>
-            </li>
-            <li>
-                <a href="">Categoria 5</a>
-            </li>
+            <?php while ($cat = $categorias->fetch_object()):  ?>
+                <li>
+                    <a href="#"><?= $cat->nombre ?></a>
+                </li>
+            <?php endwhile; ?>
         </ul>
     </nav>
     <!-- CONTENT (sidebar/registro/destacado/etc) -->
