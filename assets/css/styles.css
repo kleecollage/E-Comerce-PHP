@@ -288,6 +288,7 @@ label{
     float: left;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -303,7 +304,7 @@ label{
 }
 
 .product img {
-    width: 100px;
+    height: 250px;
     margin-bottom: 10px;
 }
 
