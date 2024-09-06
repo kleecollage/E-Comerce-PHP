@@ -1,8 +1,14 @@
 <?php
+session_start();
 require_once 'autoload.php';
+require_once 'config/Database.php';
 require_once 'config/parameters.php';
+require_once 'helpers/Utils.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php';
+
+//Conexion a BD
+$db = Database::connect();
 
 function showError() {
     $error = new ErrorController();
@@ -26,7 +32,6 @@ if (class_exists($nombre_controlador)){
     } elseif( !isset($_GET['controller']) && !isset($_GET['action'])){
         $action_default = action_default;
         $controlador->$action_default();
-        echo 'error aqui';
     } else {
         showError();
     }
