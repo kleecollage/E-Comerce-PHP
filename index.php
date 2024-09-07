@@ -6,9 +6,9 @@ require_once 'config/parameters.php';
 require_once 'helpers/Utils.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php';
-
 //Conexion a BD
 $db = Database::connect();
+
 
 function showError() {
     $error = new ErrorController();
@@ -38,6 +38,7 @@ if (class_exists($nombre_controlador)){
 } else {
     showError();
 }
+
 
 require_once 'views/layout/footer.php';
 
