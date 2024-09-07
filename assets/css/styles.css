@@ -32,7 +32,7 @@ a:hover{
 table{
     text-align: center;
     width: 100%;
-    border: 1px solid #555;
+    border-bottom: 1px solid #ccc;
 }
 
 td{
@@ -317,6 +317,12 @@ label{
     margin-bottom: 10px;
 }
 
+.img_carrito{
+    height: 150px;
+    display: block;
+    margin: 10px auto;
+}
+
 #detail-product{
     width: 100%;
 }
@@ -364,6 +370,24 @@ label{
     border-top: 4px solid #01B1EA;
 }
 
+/* ====================   CARRITO   ==================== */
+.total-carrito{
+    width: 315px;
+    float: right;
+}
+
+.total-carrito h3{
+    display: block;
+    float: left;
+    margin-top: 4px;
+
+}
+
+.button-pedido{
+    display: block;
+    float: right;
+    width: 100px;
+}
 
 
 

@@ -1,5 +1,16 @@
 <!-- --------------------   BARRA LATERAL   -------------------- -->
 <aside id="lateral">
+
+    <div id="carrito" class="block_aside">
+        <h3>Mi Carrito</h3>
+        <ul>
+            <?php $stats = Utils::statsCarrito() ?>
+            <a href="<?=base_url?>Carrito/index"><li>Productos (<?=$stats['count']?>)</li></a>
+            <a href="<?=base_url?>Carrito/index"><li>Total: $<?=$stats['total']?></li></a>
+            <a href="<?=base_url?>Carrito/index"><li>Ver el carrito</li></a>
+        </ul>
+    </div>
+
     <div id="login" class="block_aside">
         <?php if(!isset($_SESSION['identity'])): ?>
             <h3>Entrar a la web</h3>

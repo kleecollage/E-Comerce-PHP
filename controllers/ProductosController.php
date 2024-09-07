@@ -17,6 +17,7 @@ class ProductosController
             $producto = new Producto();
             $producto->setId($id);
             $product = $producto->getOne();
+            // var_dump($product->getImagen());
         }
         require_once 'views/producto/ver.php';
     }

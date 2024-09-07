@@ -132,8 +132,20 @@ class Producto
 
     public function getOne()
     {
-        $productos = $this->db->query("SELECT * FROM productos WHERE id = {$this->getId()};");
-        return $productos->fetch_object();
+        /*$producto = $this->db->query("SELECT * FROM productos WHERE id = {$this->getId()};");
+        return $producto->fetch_object();*/
+        $result = $this->db->query("SELECT * FROM productos WHERE id = {$this->getId()};");
+         if ($result && $producto = $result->fetch_object()) {
+             $this->setNombre($producto->nombre);
+             $this->setDescripcion($producto->descripcion);
+             $this->setPrecio($producto->precio);
+             $this->setStock($producto->stock);
+             $this->setOferta($producto->oferta);
+             $this->setFecha($producto->fecha);
+             $this->setImagen($producto->imagen);
+             return $this;
+         }
+         return null;
     }
 
     public function save()
