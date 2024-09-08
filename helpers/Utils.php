@@ -19,6 +19,15 @@ class Utils
         }
     }
 
+    public static function isIdentity()
+    {
+        if (!isset($_SESSION['identity'])) {
+            header("Location:".base_url);
+        } else {
+            return true;
+        }
+    }
+
     public static function showCategorias()
     {
         require_once 'models/Categoria.php';
@@ -40,7 +49,24 @@ class Utils
                 $stats['total'] += $producto['precio'] * $producto['unidades'];
             }
         }
-
         return $stats;
     }
+
+    public static function showStatus($status)
+    {
+        $value = 'Status';
+        if ($status == 'confirm'){
+            $value = 'Pendiente';
+        } elseif($status == 'preparation'){
+            $value = 'En Preparacion';
+        } elseif($status == 'ready') {
+            $value = 'Preparado para envio';
+        } elseif ($status == 'sent'){
+            $value = 'Enviado';
+        }
+        return $value;
+
+    }
+
+
 }

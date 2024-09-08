@@ -30,10 +30,10 @@
             <?php if(isset($_SESSION['admin'])): ?>
                 <li><a href="<?=base_url?>Categoria/index">Gestionar Categorias</a></li>
                 <li><a href="<?=base_url?>Productos/gestion">Gestionar Productos</a></li>
-                <li><a href="#">Gestionar Pedidos</a></li>
+                <li><a href="<?=base_url?>Pedido/gestion">Gestionar Pedidos</a></li>
             <?php endif; ?>
             <?php if (isset($_SESSION['identity'])): ?>
-                <li><a href="#">Mis Pedidos</a></li>
+                <li><a href="<?=base_url?>Pedido/mis_pedidos">Mis Pedidos</a></li>
                 <li><a href="<?=base_url?>Usuario/logout">Cerrar Sesion</a></li>
             <?php else: ?>
                 <li><a href="<?=base_url?>Usuario/registro">Registrate aqui</a></li>
