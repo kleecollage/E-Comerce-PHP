@@ -4,8 +4,12 @@ class CarritoController
 {
     public function index()
     {
-        $carrito = $_SESSION['carrito'];
-        // var_dump($carrito);
+        if (isset($_SESSION['carrito']) && count($_SESSION['carrito']) >= 1){
+            $carrito = $_SESSION['carrito'];
+            // var_dump($carrito);
+        } else {
+            $carrito = array();
+        }
         require_once 'views/carrito/index.php';
     }
 
@@ -47,9 +51,36 @@ class CarritoController
         header("Location:".base_url."Carrito/index");
     }
 
-    public function remove()
+    public function delete()
     {
+        if (isset($_GET['index'])) {
+            $index = $_GET['index'];
+            unset($_SESSION['carrito'][$index]);
+        }
+        header("Location:".base_url."Carrito/index");
+    }
 
+
+    public function up()
+    {
+        if (isset($_GET['index'])) {
+            $index = $_GET['index'];
+            $_SESSION['carrito'][$index]['unidades']++;
+        }
+        header("Location:".base_url."Carrito/index");
+    }
+
+
+    public function down()
+    {
+        if (isset($_GET['index'])) {
+            $index = $_GET['index'];
+            $_SESSION['carrito'][$index]['unidades']--;
+            if ($_SESSION['carrito'][$index]['unidades'] == 0){
+                unset($_SESSION['carrito'][$index]);
+            }
+        }
+        header("Location:".base_url."Carrito/index");
     }
 
     public function delete_all()

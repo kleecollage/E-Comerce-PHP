@@ -371,6 +371,23 @@ label{
 }
 
 /* ====================   CARRITO   ==================== */
+.delete-carrito{
+    width: 295px;
+    float: left;
+}
+
+.button-delete{
+    display: block;
+    float: left;
+    width: 100px;
+}
+
+.button-carrito{
+    width: 70px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .total-carrito{
     width: 315px;
     float: right;
@@ -387,6 +404,19 @@ label{
     display: block;
     float: right;
     width: 100px;
+}
+
+.updown-unidades{
+    width: 59%;
+    margin: 0 auto;
+}
+
+.updown-unidades a.button {
+    display: block;
+    width: 20px;
+    float: left;
+    padding: 2px;
+    margin: 7px auto;
 }
 
 

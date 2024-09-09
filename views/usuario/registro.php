@@ -1,7 +1,5 @@
 <h1>Registrarse</h1>
-<?php use helpers\Utils;
-
-if (isset($_SESSION['register']) && $_SESSION['register']=='complete' ): ?>
+<?php if (isset($_SESSION['register']) && $_SESSION['register']=='complete' ): ?>
     <strong class="alert-green">Registro competado exitosamente</strong>
 <?php elseif(isset($_SESSION['register']) && $_SESSION['register']=='failed'): ?>
     <strong class="alert-red"> Registro fallido, Introduce bien los datos </strong>
